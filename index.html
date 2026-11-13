@@ -1,12 +1,171 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kelas Bu Pebri Haloho</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Website pembelajaran Biologi kelas 9 tentang Bioteknologi. Materi, contoh, aktivitas, glosarium, dan kuis interaktif.">
+<title>Bioteknologi — Biologi Kelas 9</title>
+<style>
+:root{--ink:#17352f;--muted:#60766f;--green:#176b52;--mint:#e8f5ee;--lime:#d7efb5;--cream:#fbfaf4;--line:#dce8df;--white:#fff;--orange:#f3a64a;--shadow:0 14px 40px rgba(23,53,47,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+a{color:inherit}.wrap{width:min(1120px,92%);margin:auto}.topbar{position:sticky;top:0;z-index:20;background:rgba(251,250,244,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:68px}.brand{font-weight:850;letter-spacing:-.04em;font-size:1.15rem}.brand span{color:var(--green)}.navlinks{display:flex;gap:18px;align-items:center;flex-wrap:wrap}.navlinks a{text-decoration:none;color:var(--muted);font-size:.9rem;font-weight:650}.navlinks a:hover{color:var(--green)}
+.hero{padding:76px 0 64px;background:radial-gradient(circle at 85% 20%,#d7efb5 0,transparent 27%),linear-gradient(135deg,#edf7ed,#fbfaf4 65%);overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center}.eyebrow{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 13px;color:var(--green);font-size:.82rem;font-weight:750}.hero h1{font-size:clamp(2.7rem,6vw,5.2rem);line-height:.99;letter-spacing:-.065em;margin:20px 0}.hero h1 em{font-style:normal;color:var(--green)}.hero p{max-width:620px;color:var(--muted);font-size:1.12rem}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:12px;padding:12px 18px;background:var(--green);color:#fff;text-decoration:none;font-weight:750;cursor:pointer}.btn.secondary{background:#fff;color:var(--green);border:1px solid var(--line)}.hero-art{min-height:300px;border-radius:32px;background:linear-gradient(145deg,#cce8cf,#f4f6d9);display:grid;place-items:center;position:relative;box-shadow:var(--shadow)}.petri{width:220px;height:220px;border:12px solid rgba(255,255,255,.8);border-radius:50%;background:radial-gradient(circle at 30% 35%,#f5d88b 0 7%,transparent 8%),radial-gradient(circle at 68% 30%,#8ac79b 0 9%,transparent 10%),radial-gradient(circle at 56% 70%,#6eb58c 0 13%,transparent 14%),radial-gradient(circle at 28% 72%,#a4d6a8 0 8%,transparent 9%),#e8f4d7;box-shadow:0 18px 45px #4c8b6440;display:grid;place-items:center;font-size:4rem}.float{position:absolute;background:#fff;padding:9px 13px;border-radius:13px;font-weight:750;box-shadow:var(--shadow);font-size:.85rem}.f1{top:30px;left:20px}.f2{right:20px;bottom:35px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:-26px;position:relative}.stat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--shadow)}.stat strong{display:block;color:var(--green);font-size:1.2rem}.stat small{color:var(--muted)}
+main{padding:56px 0 80px}.section{margin:0 0 64px;scroll-margin-top:90px}.section-head{max-width:760px;margin-bottom:25px}.kicker{color:var(--green);font-size:.78rem;text-transform:uppercase;letter-spacing:.13em;font-weight:850}.section h2{font-size:clamp(1.8rem,4vw,2.65rem);letter-spacing:-.045em;line-height:1.12;margin:8px 0 12px}.lead{color:var(--muted);font-size:1.04rem}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:#fff;border:1px solid var(--line);border-radius:19px;padding:22px;box-shadow:0 6px 22px rgba(23,53,47,.04)}.card h3{margin:7px 0 8px;font-size:1.15rem}.card p{margin:0;color:var(--muted)}.icon{font-size:1.8rem}.tag{display:inline-block;background:var(--mint);color:var(--green);padding:4px 9px;border-radius:999px;font-size:.76rem;font-weight:800;margin:4px 4px 0 0}
+.callout{padding:20px 22px;border-radius:17px;background:#f0f6e7;border:1px solid #dce9c8;margin:20px 0}.callout strong{color:var(--green)}.compare{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden;border:1px solid var(--line)}.compare th,.compare td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:top}.compare th{background:var(--mint);color:var(--green)}.compare tr:last-child td{border-bottom:0}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;counter-reset:step}.step{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}.step:before{counter-increment:step;content:counter(step);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--lime);color:var(--green);font-weight:900;margin-bottom:12px}.step p{color:var(--muted);font-size:.92rem;margin:5px 0 0}
+.example{display:flex;gap:15px;align-items:flex-start}.example .icon{background:var(--mint);border-radius:13px;padding:9px}.example h3{margin:0 0 4px}.example p{color:var(--muted);margin:0}
+details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:15px 18px;margin:10px 0}summary{font-weight:800;cursor:pointer;color:var(--green)}details p{color:var(--muted);margin-bottom:0}
+.activity{background:#173f34;color:#fff;border-radius:22px;padding:28px}.activity p{color:#d6e7dc}.activity ol{padding-left:21px}.activity li{margin:7px 0}
+.quiz{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px}.q{padding:17px 0;border-bottom:1px solid var(--line)}.q:last-of-type{border:0}.q p{font-weight:750;margin:0 0 10px}.option{display:block;padding:7px 10px;border-radius:9px;cursor:pointer;color:var(--muted)}.option:hover{background:var(--mint)}.option input{margin-right:8px;accent-color:var(--green)}#result{font-weight:800;margin-top:15px}.glossary{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.term{background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px 15px}.term b{color:var(--green)}.term span{color:var(--muted)}
+footer{background:#12382f;color:#e8f2e9;padding:34px 0}footer p{color:#bfd2c6;margin:5px 0}.backtop{float:right;color:#d7efb5}
+@media(max-width:760px){.nav{align-items:flex-start;padding:14px 0;flex-direction:column}.navlinks{gap:12px}.hero{padding:50px 0}.hero-grid{grid-template-columns:1fr}.hero-art{min-height:240px}.stats{grid-template-columns:1fr;margin-top:14px}.grid2,.grid3{grid-template-columns:1fr}.steps{grid-template-columns:repeat(2,1fr)}.glossary{grid-template-columns:1fr}.compare{font-size:.88rem}.compare th,.compare td{padding:10px}}
+@media print{.topbar,.actions,.btn,#checkQuiz{display:none!important}body{background:#fff}.hero{padding:20px}.card,.stat{box-shadow:none;break-inside:avoid}main{padding:20px 0}}
+</style>
 </head>
 <body>
-  <h1>Selamat datang!</h1>
-  <p>Website kelas Biologi.</p>
+<header class="topbar"><div class="wrap nav">
+  <div class="brand">BIO<span>LAB</span> <small style="color:#789087;font-weight:600">/ KELAS 9</small></div>
+  <nav class="navlinks" aria-label="Navigasi utama">
+    <a href="#pengantar">Pengantar</a><a href="#jenis">Jenis</a><a href="#contoh">Contoh</a><a href="#dampak">Dampak</a><a href="#aktivitas">Aktivitas</a><a href="#kuis">Kuis</a>
+  </nav>
+</div></header>
+<section class="hero"><div class="wrap hero-grid">
+  <div><span class="eyebrow">🌱 MATERI PEMBELAJARAN • IPA / BIOLOGI</span>
+    <h1>Mengenal <em>Bioteknologi</em></h1>
+    <p>Bagaimana mikroorganisme membantu manusia membuat makanan, menghasilkan obat, dan mengembangkan teknologi masa depan? Yuk, pelajari bioteknologi melalui konsep, contoh nyata, dan tantangan penggunaannya.</p>
+    <div class="actions"><a class="btn" href="#pengantar">Mulai belajar ↓</a><button class="btn secondary" onclick="window.print()">Cetak materi</button></div>
+  </div>
+  <div class="hero-art" aria-label="Ilustrasi cawan petri"><div class="petri">🧫</div><span class="float f1">🔬 Sains</span><span class="float f2">🦠 Mikroorganisme</span></div>
+</div></section>
+<div class="wrap stats">
+  <div class="stat"><strong>Konsep dasar</strong><small>Memahami arti dan prinsip bioteknologi</small></div>
+  <div class="stat"><strong>Penerapan</strong><small>Mengenali produk konvensional dan modern</small></div>
+  <div class="stat"><strong>Berpikir kritis</strong><small>Menilai manfaat, risiko, dan etika</small></div>
+</div>
+<main class="wrap">
+<section class="section" id="pengantar">
+  <div class="section-head"><div class="kicker">01 / Pengantar</div><h2>Apa itu bioteknologi?</h2><p class="lead">Bioteknologi adalah pemanfaatan makhluk hidup, bagian-bagiannya, atau proses biologis untuk menghasilkan barang dan jasa yang bermanfaat bagi manusia.</p></div>
+  <div class="grid2">
+    <article class="card"><div class="icon">🦠</div><h3>Peran makhluk hidup</h3><p>Mikroorganisme seperti bakteri, jamur, dan ragi dapat membantu mengubah bahan menjadi produk baru. Sel atau enzim juga dapat dimanfaatkan dalam proses tertentu.</p></article>
+    <article class="card"><div class="icon">🧪</div><h3>Tujuan bioteknologi</h3><p>Meningkatkan kualitas hidup, membantu produksi pangan, kesehatan, pertanian, peternakan, serta pengelolaan lingkungan.</p></article>
+  </div>
+  <div class="callout"><strong>Ingat konsepnya:</strong> bioteknologi bukan hanya teknologi canggih di laboratorium. Pembuatan tempe, tape, yoghurt, dan roti juga merupakan contoh bioteknologi.</div>
+  <h3>Komponen penting dalam proses bioteknologi</h3>
+  <div class="grid3">
+    <article class="card"><div class="icon">🧫</div><h3>Organisme / agen biologis</h3><p>Misalnya bakteri, kapang, khamir, sel, atau enzim.</p></article>
+    <article class="card"><div class="icon">🌾</div><h3>Substrat / bahan</h3><p>Bahan yang diolah, misalnya kedelai, susu, singkong, atau limbah organik.</p></article>
+    <article class="card"><div class="icon">⚙️</div><h3>Kondisi proses</h3><p>Suhu, pH, kebersihan, oksigen, waktu, dan nutrisi perlu dikendalikan sesuai prosesnya.</p></article>
+  </div>
+</section>
+<section class="section" id="jenis">
+  <div class="section-head"><div class="kicker">02 / Jenis bioteknologi</div><h2>Konvensional dan modern</h2><p class="lead">Keduanya memanfaatkan proses biologis, tetapi berbeda dalam teknik dan tingkat pengendaliannya.</p></div>
+  <div class="grid2">
+    <article class="card"><span class="tag">Bioteknologi konvensional</span><h3>Memanfaatkan proses alami</h3><p>Umumnya menggunakan fermentasi dan aktivitas mikroorganisme tanpa mengubah materi genetik secara langsung. Tekniknya relatif sederhana dan telah digunakan sejak lama.</p><p style="margin-top:12px"><b>Contoh:</b> tempe, tape, yoghurt, keju, roti, kecap, dan cuka.</p></article>
+    <article class="card"><span class="tag">Bioteknologi modern</span><h3>Menggunakan teknik terarah</h3><p>Melibatkan teknik seperti rekayasa genetika, kultur jaringan, DNA rekombinan, atau penyuntingan gen untuk memperoleh sifat atau produk tertentu.</p><p style="margin-top:12px"><b>Contoh:</b> produksi insulin rekombinan, tanaman hasil rekayasa genetika, dan perbanyakan tanaman melalui kultur jaringan.</p></article>
+  </div>
+  <div style="overflow-x:auto;margin-top:20px"><table class="compare"><thead><tr><th>Aspek</th><th>Konvensional</th><th>Modern</th></tr></thead><tbody>
+    <tr><td>Teknik utama</td><td>Fermentasi / proses alami</td><td>Teknik sel dan molekuler</td></tr>
+    <tr><td>Peralatan</td><td>Dapat sederhana</td><td>Sering membutuhkan alat laboratorium khusus</td></tr>
+    <tr><td>Contoh produk</td><td>Tempe, tape, yoghurt</td><td>Insulin rekombinan, bibit kultur jaringan</td></tr>
+    <tr><td>Pengendalian</td><td>Mengatur kondisi fermentasi</td><td>Dapat mengatur atau memodifikasi sel dan materi genetik</td></tr>
+  </tbody></table></div>
+  <div class="callout"><strong>Catatan:</strong> modern tidak selalu berarti lebih baik dalam semua keadaan. Pilihan teknologi perlu mempertimbangkan tujuan, keamanan, biaya, lingkungan, dan kebutuhan masyarakat.</div>
+</section>
+<section class="section" id="fermentasi">
+  <div class="section-head"><div class="kicker">03 / Proses penting</div><h2>Bagaimana fermentasi bekerja?</h2><p class="lead">Fermentasi adalah proses metabolisme ketika mikroorganisme menguraikan senyawa organik, umumnya gula, untuk memperoleh energi. Proses ini dapat menghasilkan alkohol, asam, gas, dan senyawa lain.</p></div>
+  <div class="steps">
+    <div class="step"><b>Siapkan bahan</b><p>Bahan pangan disiapkan dan kebersihan dijaga.</p></div>
+    <div class="step"><b>Tambahkan starter</b><p>Mikroorganisme atau kultur pemula ditambahkan sesuai produk.</p></div>
+    <div class="step"><b>Atur kondisi</b><p>Suhu, waktu, oksigen, dan kondisi lain dikendalikan.</p></div>
+    <div class="step"><b>Terbentuk produk</b><p>Mikroorganisme mengubah bahan sehingga rasa, tekstur, atau daya simpannya berubah.</p></div>
+  </div>
+  <p class="lead" style="margin-top:18px">Tidak semua fermentasi membutuhkan kondisi yang sama. Sebagian berlangsung dengan oksigen, sedangkan sebagian lainnya berlangsung tanpa oksigen.</p>
+</section>
+<section class="section" id="contoh">
+  <div class="section-head"><div class="kicker">04 / Contoh dalam kehidupan</div><h2>Produk bioteknologi di sekitar kita</h2><p class="lead">Perhatikan bahan, mikroorganisme, dan perubahan yang terjadi pada setiap produk.</p></div>
+  <div class="grid2">
+    <article class="card example"><div class="icon">🫘</div><div><h3>Tempe</h3><p>Kedelai difermentasi oleh kapang <i>Rhizopus</i> (misalnya <i>Rhizopus oligosporus</i>). Hifa kapang menyatukan biji kedelai menjadi padatan.</p><span class="tag">Pangan</span></div></article>
+    <article class="card example"><div class="icon">🍶</div><div><h3>Tape</h3><p>Singkong atau beras ketan difermentasi menggunakan ragi tape yang mengandung campuran mikroorganisme. Pati diuraikan menjadi gula dan senyawa lain.</p><span class="tag">Pangan</span></div></article>
+    <article class="card example"><div class="icon">🥛</div><div><h3>Yoghurt</h3><p>Bakteri asam laktat, terutama <i>Lactobacillus delbrueckii</i> subsp. <i>bulgaricus</i> dan <i>Streptococcus thermophilus</i>, mengubah laktosa menjadi asam laktat.</p><span class="tag">Pangan</span></div></article>
+    <article class="card example"><div class="icon">🍞</div><div><h3>Roti</h3><p>Khamir <i>Saccharomyces cerevisiae</i> menghasilkan gas karbon dioksida saat memetabolisme gula. Gas membuat adonan mengembang.</p><span class="tag">Pangan</span></div></article>
+    <article class="card example"><div class="icon">💉</div><div><h3>Insulin rekombinan</h3><p>Gen pengode insulin manusia dapat dimasukkan ke mikroorganisme tertentu agar mikroorganisme menghasilkan insulin untuk keperluan medis.</p><span class="tag">Kesehatan</span></div></article>
+    <article class="card example"><div class="icon">🌱</div><div><h3>Kultur jaringan</h3><p>Bagian kecil tanaman ditumbuhkan secara steril pada media bernutrisi untuk memperbanyak tanaman dengan sifat yang diinginkan.</p><span class="tag">Pertanian</span></div></article>
+    <article class="card example"><div class="icon">🌽</div><div><h3>Tanaman rekayasa genetika</h3><p>Materi genetik tanaman dapat diubah dengan teknik tertentu untuk memperoleh sifat seperti ketahanan terhadap hama. Keamanan dan dampaknya perlu dinilai.</p><span class="tag">Pertanian</span></div></article>
+    <article class="card example"><div class="icon">♻️</div><div><h3>Bioremediasi</h3><p>Mikroorganisme tertentu dimanfaatkan untuk membantu menguraikan atau mengurangi pencemar di lingkungan dalam kondisi yang sesuai.</p><span class="tag">Lingkungan</span></div></article>
+  </div>
+</section>
+<section class="section" id="dampak">
+  <div class="section-head"><div class="kicker">05 / Manfaat dan tantangan</div><h2>Teknologi membawa peluang dan tanggung jawab</h2><p class="lead">Setiap penerapan bioteknologi perlu dievaluasi berdasarkan manfaat, risiko, dan dampaknya bagi manusia maupun lingkungan.</p></div>
+  <div class="grid2">
+    <article class="card"><div class="icon">🌟</div><h3>Manfaat</h3><ul><li>Membantu menghasilkan pangan dengan rasa, tekstur, atau daya simpan tertentu.</li><li>Mendukung produksi obat dan bahan diagnostik.</li><li>Membantu perbanyakan bibit tanaman.</li><li>Berpotensi membantu pengolahan limbah dan pencemaran.</li><li>Mendukung penelitian dan inovasi di bidang kesehatan serta pertanian.</li></ul></article>
+    <article class="card"><div class="icon">⚖️</div><h3>Tantangan dan risiko</h3><ul><li>Kontaminasi jika proses produksi tidak higienis.</li><li>Potensi dampak terhadap ekosistem dan keanekaragaman hayati.</li><li>Isu etika, hak paten, dan akses teknologi.</li><li>Biaya, ketergantungan teknologi, serta kesenjangan akses.</li><li>Produk tertentu membutuhkan pengujian keamanan dan pengawasan.</li></ul></article>
+  </div>
+  <div class="callout"><strong>Pertanyaan berpikir kritis:</strong> Apakah suatu produk bioteknologi aman? Bukti apa yang dibutuhkan? Siapa yang memperoleh manfaat, dan siapa yang mungkin terdampak?</div>
+</section>
+<section class="section" id="aktivitas">
+  <div class="section-head"><div class="kicker">06 / Aktivitas siswa</div><h2>Proyek mini: investigasi fermentasi</h2><p class="lead">Amati perubahan pada proses fermentasi menggunakan bahan yang aman dan dengan pendampingan guru atau orang dewasa.</p></div>
+  <div class="activity">
+    <h3>🔎 Tantangan: apa yang membuat adonan mengembang?</h3>
+    <p>Rancang pengamatan sederhana untuk mengetahui peran ragi dalam menghasilkan gas pada adonan. Ikuti instruksi guru dan jangan mencicipi bahan percobaan.</p>
+    <ol><li>Diskusikan pertanyaan: apakah ragi memengaruhi perubahan ukuran adonan?</li><li>Catat bahan dan variabel yang akan dibuat sama atau dibedakan.</li><li>Dengan arahan guru, amati adonan dengan ragi dan pembanding tanpa ragi.</li><li>Ukur atau catat perubahan tinggi/volume pada waktu yang ditentukan.</li><li>Buat tabel hasil, simpulkan, dan jelaskan kemungkinan sumber kesalahan.</li></ol>
+    <p><b>Keselamatan:</b> gunakan bahan pangan bersih, cuci tangan, jangan menutup wadah secara kedap jika gas dapat terbentuk, dan buang sampel sesuai arahan guru.</p>
+  </div>
+  <h3 style="margin-top:25px">Pertanyaan diskusi</h3>
+  <details><summary>1. Mengapa kebersihan penting dalam fermentasi?</summary><p>Mikroorganisme yang tidak diinginkan dapat mencemari bahan, mengubah hasil, atau membuat produk tidak aman.</p></details>
+  <details><summary>2. Mengapa yoghurt terasa lebih asam daripada susu?</summary><p>Bakteri asam laktat mengubah laktosa menjadi asam laktat sehingga pH turun dan rasa menjadi lebih asam.</p></details>
+  <details><summary>3. Apakah semua mikroorganisme merugikan?</summary><p>Tidak. Banyak mikroorganisme bermanfaat dalam pangan, kesehatan, pertanian, dan lingkungan. Namun, ada juga mikroorganisme penyebab penyakit atau pembusukan.</p></details>
+</section>
+<section class="section" id="kuis">
+  <div class="section-head"><div class="kicker">07 / Cek pemahaman</div><h2>Kuis interaktif</h2><p class="lead">Pilih satu jawaban untuk setiap pertanyaan, lalu tekan “Periksa jawaban”.</p></div>
+  <div class="quiz" id="quizBox">
+    <div class="q"><p>1. Bioteknologi adalah pemanfaatan makhluk hidup atau proses biologis untuk…</p>
+      <label class="option"><input type="radio" name="q1" value="a"> Menghasilkan barang atau jasa yang bermanfaat</label><label class="option"><input type="radio" name="q1" value="b"> Menghilangkan semua mikroorganisme</label><label class="option"><input type="radio" name="q1" value="c"> Mengubah semua bahan menjadi logam</label></div>
+    <div class="q"><p>2. Mikroorganisme yang berperan dalam pembuatan tempe adalah…</p>
+      <label class="option"><input type="radio" name="q2" value="a"> <i>Escherichia coli</i></label><label class="option"><input type="radio" name="q2" value="b"> <i>Rhizopus</i> sp.</label><label class="option"><input type="radio" name="q2" value="c"> <i>Plasmodium</i> sp.</label></div>
+    <div class="q"><p>3. Contoh bioteknologi modern adalah…</p>
+      <label class="option"><input type="radio" name="q3" value="a"> Pembuatan tape</label><label class="option"><input type="radio" name="q3" value="b"> Pembuatan roti dengan ragi</label><label class="option"><input type="radio" name="q3" value="c"> Produksi insulin rekombinan</label></div>
+    <div class="q"><p>4. Gas yang membantu adonan roti mengembang adalah…</p>
+      <label class="option"><input type="radio" name="q4" value="a"> Oksigen</label><label class="option"><input type="radio" name="q4" value="b"> Karbon dioksida</label><label class="option"><input type="radio" name="q4" value="c"> Nitrogen</label></div>
+    <div class="q"><p>5. Salah satu hal yang perlu dipertimbangkan dalam penerapan bioteknologi adalah…</p>
+      <label class="option"><input type="radio" name="q5" value="a"> Keamanan dan dampak lingkungan</label><label class="option"><input type="radio" name="q5" value="b"> Warna kemasan saja</label><label class="option"><input type="radio" name="q5" value="c"> Banyaknya iklan produk</label></div>
+    <button class="btn" id="checkQuiz" type="button">Periksa jawaban</button> <button class="btn secondary" type="button" onclick="resetQuiz()">Ulangi kuis</button>
+    <div id="result" role="status" aria-live="polite"></div>
+  </div>
+</section>
+<section class="section" id="glosarium">
+  <div class="section-head"><div class="kicker">08 / Ringkasan istilah</div><h2>Glosarium</h2></div>
+  <div class="glossary">
+    <div class="term"><b>Fermentasi</b><br><span>Proses metabolisme mikroorganisme yang mengubah senyawa organik.</span></div>
+    <div class="term"><b>Mikroorganisme</b><br><span>Organisme berukuran sangat kecil, misalnya bakteri dan khamir.</span></div>
+    <div class="term"><b>Enzim</b><br><span>Molekul biologis yang mempercepat reaksi kimia.</span></div>
+    <div class="term"><b>Rekayasa genetika</b><br><span>Teknik mengubah atau menyusun materi genetik untuk tujuan tertentu.</span></div>
+    <div class="term"><b>Kultur jaringan</b><br><span>Teknik menumbuhkan sel atau jaringan pada kondisi steril dan media terkontrol.</span></div>
+    <div class="term"><b>Bioremediasi</b><br><span>Pemanfaatan organisme untuk membantu mengurangi pencemar lingkungan.</span></div>
+    <div class="term"><b>Substrat</b><br><span>Bahan yang digunakan atau diolah dalam suatu proses biologis.</span></div>
+    <div class="term"><b>Kontaminasi</b><br><span>Masuknya bahan atau organisme yang tidak diinginkan ke dalam suatu produk atau proses.</span></div>
+  </div>
+</section>
+<section class="section">
+  <div class="callout"><strong>Kesimpulan:</strong> Bioteknologi memanfaatkan organisme, sel, atau proses biologis untuk membantu memenuhi kebutuhan manusia. Penerapannya mencakup pangan, kesehatan, pertanian, dan lingkungan. Sebagai pengguna teknologi, kita perlu memahami manfaat sekaligus menilai keamanan, etika, dan dampaknya.</div>
+  <p style="color:var(--muted);font-size:.9rem">Materi ringkas untuk pembelajaran IPA/Biologi kelas 9. Guru dapat menyesuaikan kedalaman materi, aktivitas, dan penilaian dengan kurikulum serta kondisi sekolah.</p>
+</section>
+</main>
+<footer><div class="wrap"><a class="backtop" href="#">Kembali ke atas ↑</a><b>BIOLAB • BIOLOGI KELAS 9</b><p>Belajar sains dengan rasa ingin tahu, bukti, dan tanggung jawab.</p><p style="font-size:.82rem">Satu file HTML • CSS dan JavaScript sudah tertanam • Dapat dijalankan secara offline</p></div></footer>
+<script>
+document.getElementById('checkQuiz').addEventListener('click',function(){
+  const answers={q1:'a',q2:'b',q3:'c',q4:'b',q5:'a'};
+  let score=0,answered=0;
+  Object.keys(answers).forEach(q=>{
+    const chosen=document.querySelector('input[name="'+q+'"]:checked');
+    if(chosen){answered++;if(chosen.value===answers[q])score++;}
+  });
+  const result=document.getElementById('result');
+  if(answered<5){result.textContent='Kamu baru menjawab '+answered+' dari 5 soal. Lengkapi semua jawaban terlebih dahulu.';result.style.color='#a35d13';return;}
+  result.textContent='Nilai kamu: '+score+'/5 ('+(score*20)+'%). '+(score===5?'Hebat! Semua jawaban benar.':score>=3?'Bagus! Pelajari kembali bagian yang belum tepat.':'Tetap semangat! Baca materi dan coba lagi.');result.style.color='#176b52';
+});
+function resetQuiz(){document.querySelectorAll('#quizBox input').forEach(x=>x.checked=false);document.getElementById('result').textContent='';}
+</script>
 </body>
 </html>
